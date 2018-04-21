@@ -43,8 +43,8 @@
            <th style="width:10px">#</th>
            <th>Imagen</th>
            <th>Código</th>
-           <th>Descripción</th>
-           <th>Categoría</th>
+           <th>tipo</th>
+           <th>marca</th>
            <th>Stock</th>
            <th>Precio de compra</th>
            <th>Precio de venta</th>
