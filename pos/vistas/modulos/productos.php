@@ -43,8 +43,11 @@
            <th style="width:10px">#</th>
            <th>Imagen</th>
            <th>Código</th>
-           <th>tipo</th>
-           <th>marca</th>
+           <th>tipo y Marca</th>
+           
+           <th>Material</th>
+           <th>Modelo</th>
+           <th>Detalle</th>
            <th>Stock</th>
            <th>Precio de compra</th>
            <th>Precio de venta</th>
@@ -101,6 +104,21 @@ MODAL AGREGAR PRODUCTO
 
           <div class="box-body">
 
+          <!-- ENTRADA PARA LA DESCRIPCIÓN -->
+
+             <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
+
+                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar Tipo y Marca" required>
+
+              </div>
+
+            </div>
+
+
 
             <!-- ENTRADA PARA SELECCIONAR CATEGORÍA -->
 
@@ -112,7 +130,7 @@ MODAL AGREGAR PRODUCTO
 
                 <select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required>
                   
-                  <option value="">Selecionar categoría</option>
+                  <option value="">Selecionar Material</option>
 
                   <?php
 
@@ -133,6 +151,33 @@ MODAL AGREGAR PRODUCTO
               </div>
 
             </div>
+            
+            <!-- ENTRADA PARA LA DESCRIPCIÓN -->
+
+             <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
+
+                <input type="text" class="form-control input-lg" name="nuevaModel" placeholder="Ingresar modelo" >
+
+              </div>
+
+            </div>
+            <!-- ENTRADA PARA LA DESCRIPCIÓN -->
+
+             <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
+
+                <input type="text" class="form-control input-lg" name="nuevaDetalle" placeholder="Ingresar detalle" >
+
+              </div>
+
+            </div>
 
             <!-- ENTRADA PARA EL CÓDIGO -->
             
@@ -148,19 +193,7 @@ MODAL AGREGAR PRODUCTO
 
             </div>
 
-            <!-- ENTRADA PARA LA DESCRIPCIÓN -->
-
-             <div class="form-group">
-              
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
-
-                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar descripción" required>
-
-              </div>
-
-            </div>
+            
 
              <!-- ENTRADA PARA STOCK -->
 
@@ -317,6 +350,38 @@ MODAL EDITAR PRODUCTO
 
           <div class="box-body">
 
+              <!-- ENTRADA PARA EL CÓDIGO -->
+            
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-code"></i></span> 
+
+                <input type="text" class="form-control input-lg" id="editarCodigo" name="editarCodigo"  required>
+
+              </div>
+
+            </div>
+
+
+              <!-- ENTRADA PARA LA DESCRIPCIÓN -->
+
+             <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
+
+                <input type="text" class="form-control input-lg" id="editarDescripcion" name="editarDescripcion" required>
+
+              </div>
+
+            </div>
+
+
+
+
 
             <!-- ENTRADA PARA SELECCIONAR CATEGORÍA -->
 
@@ -336,21 +401,8 @@ MODAL EDITAR PRODUCTO
 
             </div>
 
-            <!-- ENTRADA PARA EL CÓDIGO -->
             
-            <div class="form-group">
-              
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-code"></i></span> 
-
-                <input type="text" class="form-control input-lg" id="editarCodigo" name="editarCodigo" readonly required>
-
-              </div>
-
-            </div>
-
-            <!-- ENTRADA PARA LA DESCRIPCIÓN -->
+             <!-- ENTRADA PARA LA DESCRIPCIÓN -->
 
              <div class="form-group">
               
@@ -358,11 +410,31 @@ MODAL EDITAR PRODUCTO
               
                 <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
 
-                <input type="text" class="form-control input-lg" id="editarDescripcion" name="editarDescripcion" required>
+                <input type="text" class="form-control input-lg" id="editarModel" name="editarModel" required>
 
               </div>
 
             </div>
+             <!-- ENTRADA PARA LA DESCRIPCIÓN -->
+
+             <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
+
+                <input type="text" class="form-control input-lg" id="editarDetalle" name="editarDetalle" required>
+
+              </div>
+
+            </div>
+
+
+
+
+            
+
+            
 
              <!-- ENTRADA PARA STOCK -->
 

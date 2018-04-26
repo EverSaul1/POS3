@@ -36,6 +36,9 @@ class TablaProductos{
 			      "'.$productos[$i]["codigo"].'",
 			      "'.$productos[$i]["descripcion"].'",
 			      "'.$categorias["categoria"].'",
+			      
+			      "'.$productos[$i]["model"].'",
+			      "'.$productos[$i]["detalle"].'",
 			      "'.$productos[$i]["stock"].'",
 			      "$ '.number_format($productos[$i]["precio_compra"],2).'",
 			      "$ '.number_format($productos[$i]["precio_venta"],2).'",
@@ -57,7 +60,11 @@ class TablaProductos{
 			      "'.$productos[count($productos)-1]["codigo"].'",
 			      "'.$productos[count($productos)-1]["descripcion"].'",
 			      "'.$categorias["categoria"].'",
+			      
+			      "'.$productos[count($productos)-1]["model"].'",
+			      "'.$productos[count($productos)-1]["detalle"].'",
 			      "'.$productos[count($productos)-1]["stock"].'",
+			         
 			      "$ '.number_format($productos[count($productos)-1]["precio_compra"],2).'",
 			      "$ '.number_format($productos[count($productos)-1]["precio_venta"],2).'",
 			      "'.$productos[count($productos)-1]["fecha"].'",

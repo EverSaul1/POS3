@@ -34,57 +34,16 @@
 
 		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Especial"){
 
-			echo '<li class="treeview">
-
-				<a href="#">
-
-					<i class="fa fa-list-ul"></i>
-					
-					<span>Categorias</span>
-					
-					<span class="pull-right-container">
-					
-						<i class="fa fa-angle-left pull-right"></i>
-
-					</span>
-
-				</a>
-
-				<ul class="treeview-menu">
-
-				<li>
+			echo '<li>
 
 				<a href="categorias">
 
-					<i class="fa fa-th"></i>
-					<span>Marca</span>
+					<i class="fa fa-list-ul"></i>
+					<span>Materiales</span>
 
 				</a>
 
 			</li>
-					
-					<li>
-
-						<a href="materiales">
-							
-							<i class="fa fa-circle-o"></i>
-							<span>Materiales</span>
-
-						</a>
-
-					</li>
-
-					<li>
-
-						<a href="models">
-							
-							<i class="fa fa-circle-o"></i>
-							<span>Modelos</span>
-
-						</a>
-
-					</li>
-				</ul>
 
 			
 			

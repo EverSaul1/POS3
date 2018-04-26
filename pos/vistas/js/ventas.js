@@ -24,7 +24,7 @@ var table2 = $('.tablaVentas').DataTable({
 	"columnDefs": [
 
 		{
-			"targets": -5,
+			"targets": -7,
 			 "data": null,
 			 "defaultContent": '<img class="img-thumbnail imgTablaVenta" width="40px">'
 
@@ -83,7 +83,7 @@ $(".tablaVentas tbody").on( 'click', 'button.agregarProducto', function () {
 
 	var data = table2.row( $(this).parents('tr') ).data();
 
-	$(this).attr("idProducto",data[5]);
+	$(this).attr("idProducto",data[7]);
 
 })
 
@@ -103,20 +103,20 @@ function cargarImagenesProductos(){
 	    
 	    $(imgTabla[i]).attr("src",data[1]);
 
-	    if(data[4] <= 10){
+	    if(data[6] <= 10){
 
 	    	$(limiteStock[i]).addClass("btn-danger");
-	    	$(limiteStock[i]).html(data[4]);
+	    	$(limiteStock[i]).html(data[6]);
 
-	    }else if(data[4] > 11 && data[4] <= 15){
+	    }else if(data[6] > 11 && data[6] <= 15){
 
 	    	$(limiteStock[i]).addClass("btn-warning");
-	    	$(limiteStock[i]).html(data[4]);
+	    	$(limiteStock[i]).html(data[6]);
 	    
 	    }else{
 
 	    	$(limiteStock[i]).addClass("btn-success");
-	    	$(limiteStock[i]).html(data[4]);
+	    	$(limiteStock[i]).html(data[6]);
 	    }
 
   	}

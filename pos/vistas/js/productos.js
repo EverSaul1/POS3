@@ -21,7 +21,7 @@ if(window.matchMedia("(max-width:767px)").matches){
 		"columnDefs": [
 
 			{
-				"targets": -9,
+				"targets": -11,
 				 "data": null,
 				 "defaultContent": '<img class="img-thumbnail imgTabla" width="40px">'
 
@@ -74,7 +74,7 @@ if(window.matchMedia("(max-width:767px)").matches){
 		"columnDefs": [
 
 			{
-				"targets": -9,
+				"targets": -11,
 				 "data": null,
 				 "defaultContent": '<img class="img-thumbnail imgTabla" width="40px">'
 
@@ -146,7 +146,7 @@ $('.tablaProductos tbody').on( 'click', 'button', function () {
 
 	}
 	
-	$(this).attr("idProducto", data[9])	
+	$(this).attr("idProducto", data[11])	
 	$(this).attr("codigo", data[2])	
 	$(this).attr("imagen", data[1])	
 
@@ -168,20 +168,20 @@ function cargarImagenes(){
 
 		$(imgTabla[i]).attr("src", data[1]);
 
-		if(data[5] <= 10){
+		if(data[7] <= 10){
 
 	    	$(limiteStock[i]).addClass("btn-danger");
-	    	$(limiteStock[i]).html(data[5]);
+	    	$(limiteStock[i]).html(data[7]);
 
-	    }else if(data[5] > 11 && data[5] <= 15){
+	    }else if(data[7] > 11 && data[7] <= 15){
 
 	    	$(limiteStock[i]).addClass("btn-warning");
-	    	$(limiteStock[i]).html(data[5]);
+	    	$(limiteStock[i]).html(data[7]);
 	    
 	    }else{
 
 	    	$(limiteStock[i]).addClass("btn-success");
-	    	$(limiteStock[i]).html(data[5]);
+	    	$(limiteStock[i]).html(data[7]);
 	    }
 
 	}
@@ -470,9 +470,16 @@ $(".tablaProductos tbody").on("click", "button.btnEditarProducto", function(){
 
           })
 
+
            $("#editarCodigo").val(respuesta["codigo"]);
 
            $("#editarDescripcion").val(respuesta["descripcion"]);
+
+           
+
+           $("#editarModel").val(respuesta["model"]);
+
+           $("#editarDetalle").val(respuesta["detalle"]);
 
            $("#editarStock").val(respuesta["stock"]);
 

@@ -25,6 +25,9 @@ class ControladorProductos{
 		if(isset($_POST["nuevaDescripcion"])){
 
 			if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevaDescripcion"]) &&
+				
+				preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevaModel"]) &&
+				preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevaDetalle"]) &&
 			   preg_match('/^[0-9]+$/', $_POST["nuevoStock"]) &&	
 			   preg_match('/^[0-9]+$/', $_POST["nuevoPrecioCompra"]) &&
 			   preg_match('/^[0-9]+$/', $_POST["nuevoPrecioVenta"])){
@@ -99,7 +102,11 @@ class ControladorProductos{
 				$tabla = "productos";
 
 				$datos = array("id_categoria" => $_POST["nuevaCategoria"],
+					
+					"model" => $_POST["nuevaModel"],
+
 							   "codigo" => $_POST["nuevoCodigo"],
+							   "detalle" => $_POST["nuevaDetalle"],
 							   "descripcion" => $_POST["nuevaDescripcion"],
 							   "stock" => $_POST["nuevoStock"],
 							   "precio_compra" => $_POST["nuevoPrecioCompra"],
@@ -161,10 +168,13 @@ class ControladorProductos{
 
 		if(isset($_POST["editarDescripcion"])){
 
-			if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["editarDescripcion"]) &&
-			   preg_match('/^[0-9]+$/', $_POST["editarStock"]) &&	
-			   preg_match('/^[0-9]+$/', $_POST["editarPrecioCompra"]) &&
-			   preg_match('/^[0-9]+$/', $_POST["editarPrecioVenta"])){
+			if(	preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["editarDescripcion"]) &&
+				
+				preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["editarModel"]) &&
+				preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["editarDetalle"]) &&
+			   	preg_match('/^[0-9]+$/', $_POST["editarStock"]) &&	
+			   	preg_match('/^[0-9]+$/', $_POST["editarPrecioCompra"]) &&
+			   	preg_match('/^[0-9]+$/', $_POST["editarPrecioVenta"])){
 
 		   		/*=============================================
 				VALIDAR IMAGEN
@@ -248,12 +258,15 @@ class ControladorProductos{
 				$tabla = "productos";
 
 				$datos = array("id_categoria" => $_POST["editarCategoria"],
-							   "codigo" => $_POST["editarCodigo"],
-							   "descripcion" => $_POST["editarDescripcion"],
-							   "stock" => $_POST["editarStock"],
-							   "precio_compra" => $_POST["editarPrecioCompra"],
-							   "precio_venta" => $_POST["editarPrecioVenta"],
-							   "imagen" => $ruta);
+								
+								"model" => $_POST["editarModel"],
+								"detalle" => $_POST["editarDetalle"],
+							   	"codigo" => $_POST["editarCodigo"],
+							   	"descripcion" => $_POST["editarDescripcion"],
+							   	"stock" => $_POST["editarStock"],
+							   	"precio_compra" => $_POST["editarPrecioCompra"],
+							   	"precio_venta" => $_POST["editarPrecioVenta"],
+							   	"imagen" => $ruta);
 
 				$respuesta = ModeloProductos::mdlEditarProducto($tabla, $datos);
 

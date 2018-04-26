@@ -186,7 +186,7 @@
                             
                             <div class="input-group">
                            
-                              <input type="number" class="form-control input-lg" min="0" id="nuevoImpuestoVenta" name="nuevoImpuestoVenta" placeholder="0" required>
+                              <input type="number" class="form-control input-lg" min="0" id="nuevoImpuestoVenta" name="nuevoImpuestoVenta" placeholder="0" >
 
                                <input type="hidden" name="nuevoPrecioImpuesto" id="nuevoPrecioImpuesto" required>
 
@@ -238,8 +238,7 @@
                       <select class="form-control" id="nuevoMetodoPago" name="nuevoMetodoPago" required>
                         <option value="">Seleccione método de pago</option>
                         <option value="Efectivo">Efectivo</option>
-                        <option value="TC">Tarjeta Crédito</option>
-                        <option value="TD">Tarjeta Débito</option>                  
+                                          
                       </select>    
 
                     </div>
@@ -297,7 +296,13 @@
                   <th style="width: 10px">#</th>
                   <th>Imagen</th>
                   <th>Código</th>
-                  <th>Descripcion</th>
+                  <th>Tipo y Marca</th>
+                  <th>Material</th>
+                  <th>Modelo</th>
+                  
+
+
+                  
                   <th>Stock</th>
                   <th>Acciones</th>
                 </tr>
